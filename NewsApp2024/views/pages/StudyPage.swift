@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct StudyPage: View{
+    
+    @State var tabIndex:Int = 0
    
     var body: some View{
-        VStack(alignment: .leading) {
+        VStack(alignment: .center) {
             AppBarView {
                 Image("tool_bar_left_icon")
                     .resizable()
@@ -36,7 +38,18 @@ struct StudyPage: View{
                 Image(systemName: "bell")
             }
             
-            TabbarView()
+            TabbarView(items: ["动作片","喜剧片","剧情片","冒险片","科幻片","爱情片","历史片","恐怖片"], isScrollable: true, selection: $tabIndex)
+                .frame(height: 55)
+                .background(Color.blue.opacity(0.1))
+                .onChange(of: tabIndex) { newValue in
+                    print(newValue)
+                }
+            
+            TabbarView(items: ["最新上映","历年经典"], isScrollable: true, showIndicator: false)
+                .frame(height: 55)
+                .onChange(of: tabIndex) { newValue in
+                    print(newValue)
+                }
             
             Spacer()
         

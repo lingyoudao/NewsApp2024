@@ -14,13 +14,50 @@ struct TabbarItem: Identifiable{
 }
 
 struct TabbarView:View{
+    var items: [String]
+    var isScrollable: Bool = false
+    var showIndicator: Bool = true
+    var selection: Binding<Int>?
     
-    var items: [TabbarItem] = [TabbarItem(index: 0, text: "11111"), TabbarItem(index: 1, text: "22222"),TabbarItem(index: 2, text: "33333")]
+    private var tabItems:[TabbarItem]{
+        var index = -1
+        return items.map{strItem -> TabbarItem in
+            index += 1
+            return TabbarItem(index: index, text: strItem)
+            
+        }
+    }
+    var body: some View{
+        GeometryReader { reader in
+            if isScrollable{
+                ScrollView(.horizontal, showsIndicators: false){
+                    ScrollViewReader{proxy in
+                        TabbarSubView(items: tabItems, proxy:proxy, width: reader.size.width, height: reader.size.height,selection: selection)
+                    }
+                }
+            }else{
+                TabbarSubView(items: tabItems, width: reader.size.width, height: reader.size.height,selection: selection)
+            }
+        }
+    }
+   
+}
+
+struct TabbarSubView: View{
+    var items: [TabbarItem]
     
+    var proxy:ScrollViewProxy?
+    var width: CGFloat
+    var height: CGFloat
+    var selection: Binding<Int>?
+        
     private let indicatorHeight:CGFloat = 2
     
     private var itemWidth:CGFloat{
-        UIScreen.main.bounds.width / CGFloat(items.count)
+        if items.count > 4{
+            return  width / 4
+        }
+        return width / CGFloat(items.count)
     }
     
     @State private var selectedIndex = 0
@@ -31,13 +68,28 @@ struct TabbarView:View{
                 ForEach(items){item in
                     Text(item.text)
                         .frame(width: itemWidth)
-                        .background(Color.yellow)
+                        .foregroundColor(selectedIndex == item.index ? .pink : .black)
                         .onTapGesture {
                             selectedIndex = item.index
+                            selection?.wrappedValue = item.index
+                            //计算剩余可滚动宽度
+                            let surPlusW = (CGFloat(items.count)-CGFloat(selectedIndex)) * itemWidth
+                            let halfOfWidth = width / 2
+                            
+                            withAnimation {
+                                if halfOfWidth >= surPlusW{
+                                    proxy?.scrollTo(item.id, anchor: .trailing)
+                                }else{
+                                    proxy?.scrollTo(item.id, anchor: .center)
+                                }
+                                
+                            }
                         }
+                        .id(item.id)
+                        .frame(height: height - indicatorHeight)
                 }
             }
-            .background(Color.blue)
+            
             
             Divider()
                 .frame(width: itemWidth, height: indicatorHeight)
@@ -46,4 +98,5 @@ struct TabbarView:View{
                 .animation(.easeInOut(duration: 0.2))
         }
     }
+
 }
