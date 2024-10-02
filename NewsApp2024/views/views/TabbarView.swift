@@ -32,11 +32,11 @@ struct TabbarView:View{
             if isScrollable{
                 ScrollView(.horizontal, showsIndicators: false){
                     ScrollViewReader{proxy in
-                        TabbarSubView(items: tabItems, proxy:proxy, width: reader.size.width, height: reader.size.height,selection: selection)
+                        TabbarSubView(items: tabItems, showIndicator:showIndicator, proxy:proxy, width: reader.size.width, height: reader.size.height,selection: selection)
                     }
                 }
             }else{
-                TabbarSubView(items: tabItems, width: reader.size.width, height: reader.size.height,selection: selection)
+                TabbarSubView(items: tabItems,showIndicator:showIndicator, width: reader.size.width, height: reader.size.height,selection: selection)
             }
         }
     }
@@ -45,7 +45,7 @@ struct TabbarView:View{
 
 struct TabbarSubView: View{
     var items: [TabbarItem]
-    
+    var showIndicator:Bool = true
     var proxy:ScrollViewProxy?
     var width: CGFloat
     var height: CGFloat
@@ -90,12 +90,14 @@ struct TabbarSubView: View{
                 }
             }
             
+            if(showIndicator){
+                Divider()
+                    .frame(width: itemWidth, height: indicatorHeight)
+                    .background(Color.pink)
+                    .offset(x: CGFloat(selectedIndex) * itemWidth)
+                    .animation(.easeInOut(duration: 0.2))
+            }
             
-            Divider()
-                .frame(width: itemWidth, height: indicatorHeight)
-                .background(Color.pink)
-                .offset(x: CGFloat(selectedIndex) * itemWidth)
-                .animation(.easeInOut(duration: 0.2))
         }
     }
 

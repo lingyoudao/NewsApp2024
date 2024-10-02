@@ -45,7 +45,7 @@ struct StudyPage: View{
                     print(newValue)
                 }
             
-            TabbarView(items: ["最新上映","历年经典"], isScrollable: true, showIndicator: false)
+            TabbarView(items: ["最新上映","经典回顾"], showIndicator: false)
                 .frame(height: 55)
                 .onChange(of: tabIndex) { newValue in
                     print(newValue)
