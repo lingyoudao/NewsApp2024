@@ -10,9 +10,12 @@ import SwiftUI
 struct StudyPage: View{
     
     @State var tabIndex:Int = 0
+    
+    @State var currentPage:Int = 0
    
     var body: some View{
-        VStack(alignment: .center) {
+        VStack(alignment: .center, spacing: 0) {
+            //标题栏
             AppBarView {
                 Image("tool_bar_left_icon")
                     .resizable()
@@ -50,6 +53,13 @@ struct StudyPage: View{
                 .onChange(of: tabIndex) { newValue in
                     print(newValue)
                 }
+            
+            Swiper(items: [
+                Color.yellow,
+                Color.blue,
+                Color.green,
+                Color.red
+            ], currentPage: $currentPage).aspectRatio(7/3, contentMode: .fit)
             
             Spacer()
         
