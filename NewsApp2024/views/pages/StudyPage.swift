@@ -8,11 +8,10 @@
 import SwiftUI
 
 struct StudyPage: View{
-    private let padding:CGFloat = 8.0
+   
     var body: some View{
         VStack(alignment: .leading) {
-            //标题栏
-            HStack(){
+            AppBarView {
                 Image("tool_bar_left_icon")
                     .resizable()
                     .frame(width: 69, height: 25)
@@ -36,11 +35,7 @@ struct StudyPage: View{
                 
                 Image(systemName: "bell")
             }
-        .foregroundColor(.white)
-        .padding(.bottom, padding)
-        .padding(.horizontal, 4.0)
-        .background(LinearGradient(gradient: Gradient(colors: [Color(red: 20/255.0, green: 158/255.0, blue: 231/255.0), Color(red: 45/255.0, green: 205/255.0, blue: 245/255.0)]), startPoint: .leading, endPoint: .trailing))
-            Spacer()
+        
         }
     }
 }

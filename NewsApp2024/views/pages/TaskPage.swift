@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TaskPage: View{
     var body: some View{
-        Text("TaskPage")
+       Text("task page")
     }
 }
 
