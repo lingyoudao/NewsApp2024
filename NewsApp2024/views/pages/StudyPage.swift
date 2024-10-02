@@ -54,12 +54,15 @@ struct StudyPage: View{
                     print(newValue)
                 }
             
-            Swiper(items: [
-                Color.yellow,
-                Color.blue,
-                Color.green,
-                Color.red
-            ], currentPage: $currentPage).aspectRatio(7/3, contentMode: .fit)
+            ZStack(alignment: .bottom) {
+                Swiper(items: [
+                    Color.yellow,
+                    Color.blue,
+                    Color.green,
+                    Color.red
+                ], currentPage: $currentPage)
+                SwiperControl(numberOfPages: 4, currentPage: $currentPage)
+            }.aspectRatio(7/3, contentMode: .fit)
             
             Spacer()
         

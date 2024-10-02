@@ -20,6 +20,8 @@
 		7C3E25B02CACEAEC00D72769 /* AppBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3E25AF2CACEAEC00D72769 /* AppBarView.swift */; };
 		7C3E25B22CACF96500D72769 /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3E25B12CACF96500D72769 /* TabbarView.swift */; };
 		7C3E25B42CAD6C2A00D72769 /* Swiper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3E25B32CAD6C2A00D72769 /* Swiper.swift */; };
+		7C3E25B62CAD7B6600D72769 /* SwiperControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3E25B52CAD7B6600D72769 /* SwiperControl.swift */; };
+		7C3E25B82CAD7F4A00D72769 /* SwiperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3E25B72CAD7F4A00D72769 /* SwiperView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		7C3E25AF2CACEAEC00D72769 /* AppBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBarView.swift; sourceTree = "<group>"; };
 		7C3E25B12CACF96500D72769 /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
 		7C3E25B32CAD6C2A00D72769 /* Swiper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swiper.swift; sourceTree = "<group>"; };
+		7C3E25B52CAD7B6600D72769 /* SwiperControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiperControl.swift; sourceTree = "<group>"; };
+		7C3E25B72CAD7F4A00D72769 /* SwiperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiperView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +169,8 @@
 				7C3E25AF2CACEAEC00D72769 /* AppBarView.swift */,
 				7C3E25B32CAD6C2A00D72769 /* Swiper.swift */,
 				7C3E25B12CACF96500D72769 /* TabbarView.swift */,
+				7C3E25B52CAD7B6600D72769 /* SwiperControl.swift */,
+				7C3E25B72CAD7F4A00D72769 /* SwiperView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -299,8 +305,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C3E25B82CAD7F4A00D72769 /* SwiperView.swift in Sources */,
 				7C3E257F2CACC5A700D72769 /* ContentView.swift in Sources */,
 				7C3E25B42CAD6C2A00D72769 /* Swiper.swift in Sources */,
+				7C3E25B62CAD7B6600D72769 /* SwiperControl.swift in Sources */,
 				7C3E25B22CACF96500D72769 /* TabbarView.swift in Sources */,
 				7C3E25AB2CACD94E00D72769 /* TaskPage.swift in Sources */,
 				7C3E25B02CACEAEC00D72769 /* AppBarView.swift in Sources */,
