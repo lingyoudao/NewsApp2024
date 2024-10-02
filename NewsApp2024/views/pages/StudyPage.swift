@@ -35,6 +35,10 @@ struct StudyPage: View{
                 
                 Image(systemName: "bell")
             }
+            
+            TabbarView()
+            
+            Spacer()
         
         }
     }

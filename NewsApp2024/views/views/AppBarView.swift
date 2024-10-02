@@ -22,6 +22,6 @@ struct AppBarView<Content:View>: View{
     .padding(.bottom, padding)
     .padding(.horizontal, 4.0)
     .background(LinearGradient(gradient: Gradient(colors: [Color(red: 20/255.0, green: 158/255.0, blue: 231/255.0), Color(red: 45/255.0, green: 205/255.0, blue: 245/255.0)]), startPoint: .leading, endPoint: .trailing))
-        Spacer()
+       
     }
 }
