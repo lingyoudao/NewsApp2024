@@ -48,21 +48,22 @@ struct StudyPage: View{
                     print(newValue)
                 }
             
-            TabbarView(items: ["最新上映","经典回顾"], showIndicator: false)
-                .frame(height: 55)
-                .onChange(of: tabIndex) { newValue in
-                    print(newValue)
+            ScrollView{
+                LazyVStack(spacing:0){//只支持ios14.0+
+                    TabbarView(items: ["最新上映","经典回顾"], showIndicator: false)
+                        .frame(height: 55)
+                        .onChange(of: tabIndex) { newValue in
+                            print(newValue)
+                        }
+                    
+                    SwiperView(items: [
+                        Image("comedy-zww-successor").resizable(), Image("ciwei").resizable(), Image("deadpool_wolf").resizable(),Image("upstream").resizable()
+                    ], currentPage: $currentPage).aspectRatio(4/3, contentMode: .fit)
+                        .cornerRadius(12.0)
+                        .padding(.horizontal)
                 }
-            
-            ZStack(alignment: .bottom) {
-                Swiper(items: [
-                    Color.yellow,
-                    Color.blue,
-                    Color.green,
-                    Color.red
-                ], currentPage: $currentPage)
-                SwiperControl(numberOfPages: 4, currentPage: $currentPage)
-            }.aspectRatio(7/3, contentMode: .fit)
+                
+            }
             
             Spacer()
         
