@@ -11,6 +11,7 @@ struct TaskPage: View{
     
     @State var overViewSize:CGSize = .zero
     let padding: CGFloat = 8.0
+    @State var dates:[String] = []
     
     var body: some View{
         ZStack(alignment: .top) {
@@ -54,28 +55,50 @@ struct TaskPage: View{
                         
                         //日期
                         HStack(spacing: 0){
-                            Text("02.05")
-                                .frame(width: (UIScreen.main.bounds.width - 30)/7)
-                            Text("02.06")
-                                .frame(width: (UIScreen.main.bounds.width - 30)/7)
-                            Text("02.07")
-                                .frame(width: (UIScreen.main.bounds.width - 30)/7)
-                            Text("02.08")
-                                .frame(width: (UIScreen.main.bounds.width - 30)/7)
-                            Text("02.09")
-                                .frame(width: (UIScreen.main.bounds.width - 30)/7)
-                            Text("02.10")
-                                .frame(width: (UIScreen.main.bounds.width - 30)/7)
-                            Text("今日")
-                                .frame(width: (UIScreen.main.bounds.width - 30)/7)
+                            ForEach(dates, id: \.self) {
+                                Text($0)
+                                    .frame(width: (UIScreen.main.bounds.width - 30) / 7)
+                            }
                         }
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding()
                         .background(Color.white)
+                        .onAppear {
+                            dates = getWeekDate()
+                        }
                     }
                 }
             }
         }
+    }
+    
+    func getWeekDate() -> [String] {
+        
+        var dates:[String] = []
+        dates.append("今日")
+        
+        for index in 1...6 {
+            //距离今天的时间
+            let sinceTime = index * -24 * 60 * 60
+            let date = Date(timeIntervalSinceNow: Double(sinceTime))
+            let calendar = Calendar.current
+            let comp =  calendar.dateComponents([.month, .day], from: date)
+            guard let day = comp.day, let month = comp.month else{
+                return []
+            }
+            var monthStr = "\(month)"
+            if month < 10 {
+                monthStr = "0\(month)"
+            }
+            
+            var dayStr = "\(day)"
+            if day < 10 {
+                dayStr = "0\(day)"
+            }
+            
+            dates.append("\(monthStr):\(dayStr)")
+        }
+        return dates.reversed()
     }
 }
 
