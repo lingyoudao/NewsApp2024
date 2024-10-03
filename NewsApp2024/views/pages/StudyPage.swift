@@ -63,7 +63,10 @@ struct StudyPage: View{
                         .padding(.horizontal)
                 }
                 
+                ArticleListView(articles: [Article(id: "0", title: "国庆75周年", mediaName: "新华社", publishTime: "2024-10-01", content: "庆祝国庆75周年"), Article(id: "1", title: "伊朗导弹攻击以色列", mediaName: "CNN", publishTime: "2024-10-02", content: "伊朗导弹攻击以色列")])
             }
+            
+            
             
             Spacer()
         
