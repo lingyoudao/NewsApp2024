@@ -64,9 +64,14 @@ struct TaskPage: View{
                                 .frame(width: (UIScreen.main.bounds.width - 30)/7)
                             Text("02.09")
                                 .frame(width: (UIScreen.main.bounds.width - 30)/7)
+                            Text("02.10")
+                                .frame(width: (UIScreen.main.bounds.width - 30)/7)
                             Text("今日")
                                 .frame(width: (UIScreen.main.bounds.width - 30)/7)
                         }
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding()
+                        .background(Color.white)
                     }
                 }
             }
