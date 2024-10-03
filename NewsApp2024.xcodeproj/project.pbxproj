@@ -28,6 +28,7 @@
 		7C45EE432CAE22C7008A3CF9 /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C45EE422CAE22C7008A3CF9 /* VideoModel.swift */; };
 		7C45EE452CAE28C0008A3CF9 /* AsnycImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C45EE442CAE28C0008A3CF9 /* AsnycImage.swift */; };
 		7C45EE482CAE4CB0008A3CF9 /* OverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C45EE472CAE4CB0008A3CF9 /* OverView.swift */; };
+		7C45EE4B2CAE69FC008A3CF9 /* SizePreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C45EE4A2CAE69FC008A3CF9 /* SizePreferenceKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		7C45EE442CAE28C0008A3CF9 /* AsnycImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsnycImage.swift; sourceTree = "<group>"; };
 		7C45EE462CAE3533008A3CF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7C45EE472CAE4CB0008A3CF9 /* OverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverView.swift; sourceTree = "<group>"; };
+		7C45EE4A2CAE69FC008A3CF9 /* SizePreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizePreferenceKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 		7C3E257B2CACC5A700D72769 /* NewsApp2024 */ = {
 			isa = PBXGroup;
 			children = (
+				7C45EE492CAE69B7008A3CF9 /* PreferenceKey */,
 				7C45EE462CAE3533008A3CF9 /* Info.plist */,
 				7C45EE3C2CAE15AD008A3CF9 /* Model */,
 				7C3E25A62CACD8E000D72769 /* views */,
@@ -209,6 +212,14 @@
 				7C45EE422CAE22C7008A3CF9 /* VideoModel.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		7C45EE492CAE69B7008A3CF9 /* PreferenceKey */ = {
+			isa = PBXGroup;
+			children = (
+				7C45EE4A2CAE69FC008A3CF9 /* SizePreferenceKey.swift */,
+			);
+			path = PreferenceKey;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -356,6 +367,7 @@
 				7C45EE3F2CAE1604008A3CF9 /* Article.swift in Sources */,
 				7C3E25AD2CACD9AF00D72769 /* ProfilePage.swift in Sources */,
 				7C3E257D2CACC5A700D72769 /* NewsApp2024App.swift in Sources */,
+				7C45EE4B2CAE69FC008A3CF9 /* SizePreferenceKey.swift in Sources */,
 				7C3E25A92CACD91100D72769 /* StudyPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
