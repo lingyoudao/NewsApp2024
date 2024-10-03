@@ -31,8 +31,8 @@ struct TaskPage: View{
                             Text("学习明细")
                                 .font(Font.system(size: 16))
                         }
-                        .frame(maxWidth: .infinity)
-                        .background(Color.white)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .background(RoundedCorners(top: 15.0, background: Color.white))
                     }
                 }
             }
