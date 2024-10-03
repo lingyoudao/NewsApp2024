@@ -29,14 +29,14 @@ struct OverView:View{
             ZStack(alignment: .center) {
                 Circle()
                     .trim(from: 0.4, to: 1.0)
-                    .stroke(style: StrokeStyle(lineWidth: 10))
+                    .stroke(style: StrokeStyle(lineWidth: 10, lineCap: .round))
                     .rotation(.degrees(18.5))
                     .frame(width: screen.width / 2 - padding * 2, height: screen.width / 2 - padding * 2)
                 .foregroundColor(Color.gray.opacity(0.3))
                 
                 Circle()
                     .trim(from: 0.4, to: 0.6)
-                    .stroke(style: StrokeStyle(lineWidth: 10))
+                    .stroke(style: StrokeStyle(lineWidth: 10, lineCap: .round))
                     .rotation(.degrees(18.5))
                     .frame(width: screen.width / 2 - padding * 2, height: screen.width / 2 - padding * 2)
                 

@@ -30,6 +30,7 @@
 		7C45EE482CAE4CB0008A3CF9 /* OverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C45EE472CAE4CB0008A3CF9 /* OverView.swift */; };
 		7C45EE4B2CAE69FC008A3CF9 /* SizePreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C45EE4A2CAE69FC008A3CF9 /* SizePreferenceKey.swift */; };
 		7C45EE4D2CAE767A008A3CF9 /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C45EE4C2CAE767A008A3CF9 /* RoundedCorners.swift */; };
+		7C45EE4F2CAE7AEA008A3CF9 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C45EE4E2CAE7AEA008A3CF9 /* ChartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		7C45EE472CAE4CB0008A3CF9 /* OverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverView.swift; sourceTree = "<group>"; };
 		7C45EE4A2CAE69FC008A3CF9 /* SizePreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizePreferenceKey.swift; sourceTree = "<group>"; };
 		7C45EE4C2CAE767A008A3CF9 /* RoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorners.swift; sourceTree = "<group>"; };
+		7C45EE4E2CAE7AEA008A3CF9 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				7C3E25AF2CACEAEC00D72769 /* AppBarView.swift */,
+				7C45EE4E2CAE7AEA008A3CF9 /* ChartView.swift */,
 				7C45EE472CAE4CB0008A3CF9 /* OverView.swift */,
 				7C45EE3A2CAE149E008A3CF9 /* ArticleListView.swift */,
 				7C3E25B32CAD6C2A00D72769 /* Swiper.swift */,
@@ -365,6 +368,7 @@
 				7C3E25B62CAD7B6600D72769 /* SwiperControl.swift in Sources */,
 				7C45EE412CAE1D4C008A3CF9 /* VideoListView.swift in Sources */,
 				7C3E25B22CACF96500D72769 /* TabbarView.swift in Sources */,
+				7C45EE4F2CAE7AEA008A3CF9 /* ChartView.swift in Sources */,
 				7C3E25AB2CACD94E00D72769 /* TaskPage.swift in Sources */,
 				7C3E25B02CACEAEC00D72769 /* AppBarView.swift in Sources */,
 				7C45EE3F2CAE1604008A3CF9 /* Article.swift in Sources */,

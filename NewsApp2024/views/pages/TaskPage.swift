@@ -30,9 +30,43 @@ struct TaskPage: View{
                         HStack{
                             Text("学习明细")
                                 .font(Font.system(size: 16))
-                        }
+                                .fontWeight(.bold)
+                        }.padding(.top)
+                            .padding(.horizontal)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .background(RoundedCorners(top: 15.0, background: Color.white))
+                        
+                        HStack{
+                            Text("最近一周获得积分情况")
+                                .font(Font.system(size: 14))
+                                .foregroundColor(Color(.sRGB, red: 151/255, green: 151/255, blue: 151/255, opacity: 1))
+                        }
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding()
+                        .background(Color.white)
+                        
+                        HStack{
+                            ChartView()
+                        }
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding()
+                        .background(Color.white)
+                        
+                        //日期
+                        HStack(spacing: 0){
+                            Text("02.05")
+                                .frame(width: (UIScreen.main.bounds.width - 30)/7)
+                            Text("02.06")
+                                .frame(width: (UIScreen.main.bounds.width - 30)/7)
+                            Text("02.07")
+                                .frame(width: (UIScreen.main.bounds.width - 30)/7)
+                            Text("02.08")
+                                .frame(width: (UIScreen.main.bounds.width - 30)/7)
+                            Text("02.09")
+                                .frame(width: (UIScreen.main.bounds.width - 30)/7)
+                            Text("今日")
+                                .frame(width: (UIScreen.main.bounds.width - 30)/7)
+                        }
                     }
                 }
             }
