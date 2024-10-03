@@ -27,6 +27,7 @@
 		7C45EE412CAE1D4C008A3CF9 /* VideoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C45EE402CAE1D4C008A3CF9 /* VideoListView.swift */; };
 		7C45EE432CAE22C7008A3CF9 /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C45EE422CAE22C7008A3CF9 /* VideoModel.swift */; };
 		7C45EE452CAE28C0008A3CF9 /* AsnycImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C45EE442CAE28C0008A3CF9 /* AsnycImage.swift */; };
+		7C45EE482CAE4CB0008A3CF9 /* OverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C45EE472CAE4CB0008A3CF9 /* OverView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		7C45EE422CAE22C7008A3CF9 /* VideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
 		7C45EE442CAE28C0008A3CF9 /* AsnycImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsnycImage.swift; sourceTree = "<group>"; };
 		7C45EE462CAE3533008A3CF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		7C45EE472CAE4CB0008A3CF9 /* OverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				7C3E25AF2CACEAEC00D72769 /* AppBarView.swift */,
+				7C45EE472CAE4CB0008A3CF9 /* OverView.swift */,
 				7C45EE3A2CAE149E008A3CF9 /* ArticleListView.swift */,
 				7C3E25B32CAD6C2A00D72769 /* Swiper.swift */,
 				7C45EE402CAE1D4C008A3CF9 /* VideoListView.swift */,
@@ -338,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C45EE482CAE4CB0008A3CF9 /* OverView.swift in Sources */,
 				7C3E25B82CAD7F4A00D72769 /* SwiperView.swift in Sources */,
 				7C45EE3B2CAE149E008A3CF9 /* ArticleListView.swift in Sources */,
 				7C45EE452CAE28C0008A3CF9 /* AsnycImage.swift in Sources */,
