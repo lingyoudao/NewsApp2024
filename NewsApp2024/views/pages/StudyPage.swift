@@ -10,11 +10,11 @@ import SwiftUI
 struct StudyPage: View{
     
     @State var tabIndex:Int = 0
-    
+    @State var showNewsList: Bool = false
     @State var currentPage:Int = 0
    
     var body: some View{
-        VStack(alignment: .center, spacing: 0) {
+        VStack(spacing: 0) {
             //标题栏
             AppBarView {
                 Image("tool_bar_left_icon")
@@ -63,7 +63,13 @@ struct StudyPage: View{
                         .padding(.horizontal)
                 }
                 
-                ArticleListView(articles: [Article(id: "0", title: "国庆75周年", mediaName: "新华社", publishTime: "2024-10-01", content: "庆祝国庆75周年"), Article(id: "1", title: "伊朗导弹攻击以色列", mediaName: "CNN", publishTime: "2024-10-02", content: "伊朗导弹攻击以色列")])
+                if(showNewsList){
+                    ArticleListView(articles: [Article(id: "0", title: "国庆75周年", mediaName: "新华社", publishTime: "2024-10-01", content: "庆祝国庆75周年"), Article(id: "1", title: "伊朗导弹攻击以色列", mediaName: "CNN", publishTime: "2024-10-02", content: "伊朗导弹攻击以色列")])
+                }else{
+                    VideoListView(videos: [
+                        VideoModel(id: "0", title: "1111", duration: "2:0:0", imgUrl: "https://www.66tutup.com/2023/7271.jpg"),VideoModel(id: "1", title: "2222", duration: "1:0:0", imgUrl: "https://www.66tutup.com/2023/7271.jpg"),
+                        VideoModel(id: "2", title: "3333", duration: "3:0:0", imgUrl: "https://www.66tutup.com/2023/7271.jpg")])
+                }
             }
             
             

@@ -23,6 +23,7 @@ struct ArticleListView: View{
                 Text(article.publishTime)
                     .font(Font.system(size: 10))
             }
+            .foregroundColor(Color(.sRGB, red: 153/255, green: 153/255, blue: 153/255, opacity:1))
         }
         .padding(.top)
         .padding(.horizontal)
