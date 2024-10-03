@@ -81,6 +81,11 @@ struct TaskPage: View{
                         .frame(maxWidth: .infinity, alignment: .center)
                         .padding()
                         .background(Color.white)
+                        
+                        DailyTask()
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .background(Color.white)
                     }
                 }
             }
