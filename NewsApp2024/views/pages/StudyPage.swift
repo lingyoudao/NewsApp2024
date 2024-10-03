@@ -10,7 +10,8 @@ import SwiftUI
 struct StudyPage: View{
     
     @State var tabIndex:Int = 0
-    @State var showNewsList: Bool = false
+    @State var typeIndex: Int = 0 //类型
+    @State var showNewsList: Bool = true
     @State var currentPage:Int = 0
    
     var body: some View{
@@ -50,10 +51,10 @@ struct StudyPage: View{
             
             ScrollView{
                 LazyVStack(spacing:0){//只支持ios14.0+
-                    TabbarView(items: ["最新上映","经典回顾"], showIndicator: false)
+                    TabbarView(items: ["最新上映","经典回顾"], showIndicator: false, selection: $typeIndex)
                         .frame(height: 55)
-                        .onChange(of: tabIndex) { newValue in
-                            print(newValue)
+                        .onChange(of: typeIndex) { newValue in
+                            showNewsList = newValue == 0
                         }
                     
                     SwiperView(items: [

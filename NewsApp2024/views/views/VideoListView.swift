@@ -14,8 +14,12 @@ struct VideoListView: View{
     var body: some View{
         ForEach(videos) { item in
             HStack{
-                Image(item.imgUrl).resizable()
-                    .frame(width:100, height: 56.25)
+                AsyncImage(item.imgUrl){
+                    Text("loading")
+                }
+                .clipShape(RoundedRectangle(cornerRadius: 5.0))
+                .frame(width:100, height: 56.25)
+                
                 
                 VStack(alignment:.leading){
                     Text(item.title)
