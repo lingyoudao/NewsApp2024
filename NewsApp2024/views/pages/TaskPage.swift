@@ -58,6 +58,8 @@ struct TaskPage: View{
                             ForEach(dates, id: \.self) {
                                 Text($0)
                                     .frame(width: (UIScreen.main.bounds.width - 30) / 7)
+                                    .foregroundColor(Color(.sRGB, red: 151/255, green: 151/255, blue: 151/255, opacity: 1))
+                                    .font(Font.system(size: 12))
                             }
                         }
                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -66,6 +68,19 @@ struct TaskPage: View{
                         .onAppear {
                             dates = getWeekDate()
                         }
+                        
+                        HStack{
+                            Text("今日获得0积分，快去完成下面的任务吧")
+                                .foregroundColor(Color(.sRGB, red: 20/255, green: 158/255, blue: 231/255, opacity: 1))
+                                .font(Font.system(size: 14))
+                                .padding()
+                                .frame(maxWidth: .infinity, alignment: .center)
+                                .background(Color(.sRGB, red: 20/255, green: 158/255, blue: 231/255, opacity: 0.1))
+                                .cornerRadius(5)
+                        }
+                        .frame(maxWidth: .infinity, alignment: .center)
+                        .padding()
+                        .background(Color.white)
                     }
                 }
             }

@@ -15,6 +15,7 @@ struct ChartView:View{
     
     //每个积分对应的高度
     let perY: CGFloat = 8
+    
     var userPoints:[CGFloat] = [0,2,6,9.5,10,15, 5]
     
     var body: some View{
