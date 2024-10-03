@@ -24,7 +24,7 @@ struct ContentView: View {
                 .tabItem {
                     Image("mine_icon")
                     Text("我的")
-                }
+                }.ignoresSafeArea(edges: .top)
         }
     }
 }

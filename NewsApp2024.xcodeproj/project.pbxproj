@@ -32,6 +32,7 @@
 		7C45EE4D2CAE767A008A3CF9 /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C45EE4C2CAE767A008A3CF9 /* RoundedCorners.swift */; };
 		7C45EE4F2CAE7AEA008A3CF9 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C45EE4E2CAE7AEA008A3CF9 /* ChartView.swift */; };
 		7C45EE512CAEA6FB008A3CF9 /* DailyTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C45EE502CAEA6FB008A3CF9 /* DailyTask.swift */; };
+		7C45EE532CAEBB33008A3CF9 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C45EE522CAEBB33008A3CF9 /* ItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		7C45EE4C2CAE767A008A3CF9 /* RoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorners.swift; sourceTree = "<group>"; };
 		7C45EE4E2CAE7AEA008A3CF9 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		7C45EE502CAEA6FB008A3CF9 /* DailyTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTask.swift; sourceTree = "<group>"; };
+		7C45EE522CAEBB33008A3CF9 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				7C3E25AF2CACEAEC00D72769 /* AppBarView.swift */,
+				7C45EE522CAEBB33008A3CF9 /* ItemView.swift */,
 				7C45EE4E2CAE7AEA008A3CF9 /* ChartView.swift */,
 				7C45EE472CAE4CB0008A3CF9 /* OverView.swift */,
 				7C45EE3A2CAE149E008A3CF9 /* ArticleListView.swift */,
@@ -365,6 +368,7 @@
 				7C3E25B82CAD7F4A00D72769 /* SwiperView.swift in Sources */,
 				7C45EE3B2CAE149E008A3CF9 /* ArticleListView.swift in Sources */,
 				7C45EE452CAE28C0008A3CF9 /* AsnycImage.swift in Sources */,
+				7C45EE532CAEBB33008A3CF9 /* ItemView.swift in Sources */,
 				7C3E257F2CACC5A700D72769 /* ContentView.swift in Sources */,
 				7C45EE432CAE22C7008A3CF9 /* VideoModel.swift in Sources */,
 				7C3E25B42CAD6C2A00D72769 /* Swiper.swift in Sources */,
